@@ -7,9 +7,10 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-app.listen(process.env.POST, function(){
-   console.log("server is running");
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname+"/signup.html")
@@ -53,6 +54,9 @@ response.on("data", function(data){
 request.write(jsondata)
 request.end()
 })
+
+
+
 
 // API key
 // db45668a7e1e2db38f571ea7f6bbb5d8-us14
