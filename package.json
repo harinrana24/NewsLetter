@@ -4,9 +4,7 @@
   "description": "This is a mailchimp based api project for email marketing ",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "npm run build && node server.js"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1"},
   "author": "Harin rana",
   "license": "ISC",
   "dependencies": {
