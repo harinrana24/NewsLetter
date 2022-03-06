@@ -7,6 +7,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static("public"))
 
+setInterval(console.log.bind(console, 'tick'), 1000);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
