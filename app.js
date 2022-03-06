@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-app.listen(process.env.POST || 3000, function(){
+app.listen(process.env.POST, function(){
    console.log("server is running");
 })
 
